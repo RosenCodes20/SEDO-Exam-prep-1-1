@@ -12,7 +12,7 @@
   <script src="https://code.jquery.com/qunit/qunit-2.19.4.js"></script>
   <script src="script.js"></script>
   <script>
-    QUnit.module('Calculator functionalities');
+    QUnit.module('Calculator functions');
 
     QUnit.test('add()', assert => {
       assert.equal(add(2, 3), 5, '2 + 3 = 5');
@@ -34,7 +34,7 @@
       document.getElementById('btn-subtract').click();
       assert.equal(
         document.getElementById('result').textContent,
-        'Please do fill both inputs',
+        'Please fill both inputs',
         'Shows warning if inputs are empty'
       );
     });
