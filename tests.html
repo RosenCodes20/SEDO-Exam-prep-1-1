@@ -23,6 +23,21 @@
       assert.equal(subtract(5, 3), 2, '5 - 3 = 2');
       assert.equal(subtract(0, 4), -4, '0 - 4 = -4');
     });
+
+    QUnit.test('multiply()', assert => {
+      assert.equal(multiply(2, 3), 6, '2 × 3 = 6');
+    });
+
+    QUnit.test('subtract with empty inputs', assert => {
+      document.getElementById('a').value = '';
+      document.getElementById('b').value = '';
+      document.getElementById('btn-subtract').click();
+      assert.equal(
+        document.getElementById('result').textContent,
+        'Please fill both inputs',
+        'Shows warning if inputs are empty'
+      );
+    });
   </script>
 </body>
 </html>
